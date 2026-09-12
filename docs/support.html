@@ -3,36 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>技术支持 - WorkdayAlarm</title>
+  <title>技术支持 - 发条 ClockWork</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 60px auto; padding: 0 20px; line-height: 1.8; color: #333; }
     h1 { color: #007AFF; }
+    h2 { color: #555; margin-top: 30px; }
     a { color: #007AFF; }
     .card { background: #f5f5f7; border-radius: 12px; padding: 20px; margin: 20px 0; }
+    .q { font-weight: 600; margin-top: 16px; }
   </style>
 </head>
 <body>
   <h1>技术支持</h1>
+  <p>使用「发条 ClockWork」遇到问题？先看看下面的常见问题，仍未解决可邮件联系。</p>
 
   <div class="card">
     <h2>常见问题</h2>
-    <p><strong>Q: 闹钟没有在预期时间响起？</strong></p>
-    <p>A: 请检查是否已授权通知权限（系统设置 → 通知 → WorkdayAlarm），以及闹钟音量设置。</p>
 
-    <p><strong>Q: 节假日判断不准确？</strong></p>
-    <p>A: 本应用基于国务院发布的法定节假日安排。如有更新，应用会自动获取最新数据。</p>
+    <p class="q">Q: 闹钟没有在预期时间响起？</p>
+    <p>A: 本应用使用系统闹钟（AlarmKit）权限：请到「设置 → 发条 → 闹钟」允许权限；闹钟页顶部也会显示当前权限状态。另外请确认该闹钟是开启状态、没有落在请假日期上。注意静音/勿扰模式下若已授权仍会响铃并全屏提醒。</p>
 
-    <p><strong>Q: 如何设置工作日闹钟？</strong></p>
-    <p>A: 新建闹钟后，在重复设置中选择"工作日"，应用会智能避开周末和法定节假日。</p>
+    <p class="q">Q: 节假日 / 调休判断不对？</p>
+    <p>A: 数据基于公开的官方节假日安排，启动后会自动更新。可在「日历设置」里切换国家口径；个别年份的临时调整可能滞后，请以官方公告为准。</p>
+
+    <p class="q">Q: 专业版怎么购买，和登录有关系吗？</p>
+    <p>A: 专业版通过 App Store 内购（¥16/年自动续期订阅，或 ¥98 买断），与你的 Apple 账户绑定，不需要登录 App。登录后我们还会按账号识别内部 VIP 白名单。免费版可用 30 天专业版功能试用。</p>
+
+    <p class="q">Q: 怎么恢复购买 / 取消订阅？</p>
+    <p>A: 在「专业版」页点「恢复购买」；取消订阅在系统「设置 → Apple 账户 → 订阅」里操作。</p>
+
+    <p class="q">Q: 版本备份存到哪里？会占用多久？</p>
+    <p>A: 默认只存本机；开启「备份到 iCloud」后写入你自己的 iCloud 云盘。保留天数可选 7/30/60/90 天，超期自动清理（本机与云端一起清）。</p>
+
+    <p class="q">Q: 怎么注销账号？</p>
+    <p>A: 用户面板 → 用户设置 → 「注销账号」。会删除本机账号档案与成就、本机与 iCloud 上的全部历史备份并退出登录，无法恢复。「退出登录」只切换账号，不删数据。</p>
+
+    <p class="q">Q: 悬浮球挡住了内容 / 怎么打开设置？</p>
+    <p>A: 悬浮球可以拖动到任意位置；点它切换功能页，<strong>按住 0.5 秒</strong>打开设置面板，也可以从屏幕<strong>左边缘向右滑</strong>打开。首次启动会播放一次手势引导，之后可在「手势设置 → 重新观看手势引导」里重看。</p>
   </div>
 
   <h2>联系我们</h2>
-  <p>如有问题或建议，欢迎通过以下方式联系：</p>
   <ul>
-    <li>GitHub Issues: <a href="https://github.com/grimlock-zdh/WorkdayAlarm/issues">提交 Issue</a></li>
-    <li>邮箱: grimlock_zdh@163.com</li>
+    <li>邮箱：<a href="mailto:grimlock_zdh@163.com">grimlock_zdh@163.com</a></li>
+    <li>邮件里附上：机型、iOS 版本、App 版本（设置页可见 `1.0.0 (commit)`）、问题描述，会更快定位。</li>
   </ul>
 
-  <p><a href="privacy.html">← 隐私政策</a></p>
+  <p><a href="privacy.html">隐私政策</a>　·　<a href="terms.html">使用条款</a>　·　<a href="index.html">首页</a></p>
 </body>
 </html>
