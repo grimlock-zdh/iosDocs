@@ -19,12 +19,11 @@ cookies, device identifiers, or access logs.
 
 ## Update a release
 
-Edit `docs/version.json`, commit/push the `iosDocs` repository, then deploy:
+Edit `docs/version.json`, commit/push the `iosDocs` repository, then run the
+idempotent deploy script from the repository root:
 
 ```bash
-tar -C docs -czf - . |
-  ssh -i ~/.ssh/ali_grimlock.pem root@8.159.136.59 \
-  'mkdir -p /srv/grimlock.com.cn && tar -xzf - -C /srv/grimlock.com.cn'
+./deploy/deploy.sh
 ```
 
 For legal-page changes, deploy the whole `docs/` directory the same way.
