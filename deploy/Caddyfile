@@ -1,0 +1,39 @@
+{
+	email grimlock_zdh@163.com
+	admin 127.0.0.1:2019
+}
+
+grimlock.com.cn {
+	root * /srv/grimlock.com.cn
+	encode zstd gzip
+
+	@version path /version.json /clockwork/version.json
+	header @version Cache-Control "public, max-age=30, stale-while-revalidate=30"
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		Content-Security-Policy "default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'"
+		-Server
+	}
+
+	@not_get_head not method GET HEAD
+	respond @not_get_head 405
+
+	handle /healthz {
+		respond "ok" 200
+	}
+
+	handle_path /clockwork/* {
+		try_files {path} {path}.html {path}/index.html
+		file_server
+	}
+
+	handle {
+		try_files {path} {path}.html {path}/index.html
+		file_server
+	}
+}

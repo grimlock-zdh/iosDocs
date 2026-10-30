@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "bundleId": "com.grimlock.clockwork",
+  "latestVersion": "1.0.7",
+  "build": 30,
+  "minimumSupportedBuild": 0,
+  "updateUrl": "https://apps.apple.com/app/id6800189860",
+  "releaseNote": "新增 iPhone Duo 完整适配，优化日历布局与“接下来”信息；普通 iPhone 布局保持不变。",
+  "releaseNoteEn": "Full iPhone Duo support, refined calendar layouts and upcoming-day summaries. Existing iPhone layouts remain unchanged.",
+  "releaseDate": "2026-10-25T21:39:13Z",
+  "force": false,
+  "rolloutPercent": 100
+}

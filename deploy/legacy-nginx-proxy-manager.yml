@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: nginx-app
+    image: jc21/nginx-proxy-manager:2.9.19
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+      - "5003:81"
+      - "127.0.0.1:8443:443"
+    volumes:
+      - /clouddream/nginx-proxy-manage/data:/data
+      - /clouddream/nginx-proxy-manage/letsencrypt:/etc/letsencrypt
+      - /clouddream/nginx-proxy-manage/app/index.js:/app/index.js
