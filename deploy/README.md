@@ -10,6 +10,7 @@ GitHub Pages remains the read-only backup.
 - `https://grimlock.com.cn/terms.html`
 - `https://grimlock.com.cn/support.html`
 - `https://grimlock.com.cn/version.json`
+- `https://grimlock.com.cn/holiday-data/holiday-data-china.json`
 - Compatibility aliases: prefix any page with `/clockwork/`
 - Health check: `https://grimlock.com.cn/healthz`
 - Backup: `https://grimlock-zdh.github.io/iosDocs/`
@@ -35,6 +36,8 @@ For legal-page changes, deploy the whole `docs/` directory the same way.
 - Config: `/etc/caddy/Caddyfile`
 - Static files: `/srv/grimlock.com.cn`
 - Caddy state/certificates: `/var/lib/caddy/.local/share/caddy`
+- Holiday mirror: `/srv/grimlock.com.cn/holiday-data`
+- Holiday mirror timer: `clockwork-holiday-sync.timer` (every 10 minutes)
 - Legacy Nginx Proxy Manager is retained for its existing admin service on
   port `5003`; its web ports are bound to localhost only.
 

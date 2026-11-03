@@ -1,0 +1,24 @@
+#!/bin/bash
+set -euo pipefail
+
+target_dir="/srv/grimlock.com.cn/holiday-data"
+archive_url="https://codeload.github.com/grimlock-zdh/ClockWork-holiday-data/tar.gz/refs/heads/main"
+install -d -m 0755 "$target_dir"
+
+tmpdir="$(mktemp -d /tmp/clockwork-holiday-sync.XXXXXX)"
+trap 'rm -rf "$tmpdir"' EXIT
+
+# raw.githubusercontent.com 在国内 ECS 上不可达；改用 codeload 下载整个仓库，
+# 每轮只发一个请求，再原子替换 7 个 JSON。
+curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 15 --max-time 60 \
+  -A "ClockWorkHolidayMirror/1.0 (grimlock_zdh@163.com)" \
+  "$archive_url" -o "$tmpdir/repo.tar.gz"
+install -d -m 0755 "$tmpdir/source"
+tar -xzf "$tmpdir/repo.tar.gz" -C "$tmpdir/source" --strip-components=1
+
+for country in china france germany india japan uk usa; do
+  source_file="$tmpdir/source/holiday-data-${country}.json"
+  python3 -m json.tool "$source_file" >/dev/null
+  chmod 0644 "$source_file"
+  mv "$source_file" "${target_dir}/holiday-data-${country}.json"
+done

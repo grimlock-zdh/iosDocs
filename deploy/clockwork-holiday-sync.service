@@ -1,0 +1,12 @@
+[Unit]
+Description=Mirror ClockWork holiday data from GitHub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/clockwork-holiday-sync
+User=root
+Group=root
+Nice=10
+IOSchedulingClass=idle

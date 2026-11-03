@@ -10,6 +10,9 @@ grimlock.com.cn {
 	@version path /version.json /clockwork/version.json
 	header @version Cache-Control "public, max-age=30, stale-while-revalidate=30"
 
+	@holidayData path /holiday-data/*.json
+	header @holidayData Cache-Control "public, max-age=60, stale-while-revalidate=30"
+
 	header {
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 		X-Content-Type-Options "nosniff"
