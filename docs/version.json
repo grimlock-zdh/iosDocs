@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "bundleId": "com.grimlock.clockwork",
-  "latestVersion": "1.0.8",
-  "build": 31,
+  "latestVersion": "1.0.9",
+  "build": 32,
   "minimumSupportedBuild": 0,
   "updateUrl": "https://apps.apple.com/app/id6800189860",
-  "releaseNote": "底部导航升级为 iOS Liquid Glass；节假日数据检查与同步更快。",
-  "releaseNoteEn": "The bottom navigation now uses iOS Liquid Glass, with faster holiday-data checks and synchronization.",
-  "releaseDate": "2026-11-04T19:14:00Z",
+  "releaseNote": "新增 2027 年官方节假日与调休数据；修复数据覆盖和官方年份在切换国家后不刷新的问题；区分最后检查与数据更新时间。",
+  "releaseNoteEn": "Official 2027 holiday and makeup-day data; fixes data coverage and official-year refresh across countries; separates last-check and data-updated times.",
+  "releaseDate": "2026-11-06T02:21:00Z",
   "force": false,
   "rolloutPercent": 100
 }
