@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "bundleId": "com.grimlock.clockwork",
-  "latestVersion": "1.0.9",
-  "build": 32,
+  "latestVersion": "1.0.11",
+  "build": 34,
   "minimumSupportedBuild": 0,
   "updateUrl": "https://apps.apple.com/app/id6800189860",
-  "releaseNote": "新增 2027 年官方节假日与调休数据；修复数据覆盖和官方年份在切换国家后不刷新的问题；区分最后检查与数据更新时间。",
-  "releaseNoteEn": "Official 2027 holiday and makeup-day data; fixes data coverage and official-year refresh across countries; separates last-check and data-updated times.",
-  "releaseDate": "2026-11-06T02:21:00Z",
+  "releaseNote": "更新检测新增自建清单与 Apple App Store 双源比对，自动选择较高版本并保留强制更新与分阶段发布规则；修复 2027 年除夕在月历和挂件中的显示。",
+  "releaseNoteEn": "Update checks now compare the self-hosted manifest with the Apple App Store, select the newer version, preserve forced-update and phased-rollout rules, and fix Lunar New Year Eve in the 2027 calendar and widgets.",
+  "releaseDate": "2026-11-06T18:02:19Z",
   "force": false,
   "rolloutPercent": 100
 }
