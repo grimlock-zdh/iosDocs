@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "bundleId": "com.grimlock.clockwork",
-  "latestVersion": "1.0.7",
-  "build": 30,
+  "latestVersion": "1.0.8",
+  "build": 31,
   "minimumSupportedBuild": 0,
   "updateUrl": "https://apps.apple.com/app/id6800189860",
-  "releaseNote": "新增 iPhone Duo 完整适配，优化日历布局与“接下来”信息；普通 iPhone 布局保持不变。",
-  "releaseNoteEn": "Full iPhone Duo support, refined calendar layouts and upcoming-day summaries. Existing iPhone layouts remain unchanged.",
-  "releaseDate": "2026-10-25T21:39:13Z",
+  "releaseNote": "底部导航升级为 iOS Liquid Glass；节假日数据检查与同步更快。",
+  "releaseNoteEn": "The bottom navigation now uses iOS Liquid Glass, with faster holiday-data checks and synchronization.",
+  "releaseDate": "2026-11-04T19:14:00Z",
   "force": false,
   "rolloutPercent": 100
 }
